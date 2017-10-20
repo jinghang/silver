@@ -29,10 +29,10 @@ repositories {
 }
 
 dependencies{
-    compile project(':common')
-    compile project(':util')
-    compile project(':repo')
-    compile project(':service')
+    compile project(':silver-common')
+    compile project(':silver-util')
+    compile project(':silver-repo')
+    compile project(':silver-service')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile "org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}"
     compile "org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1"
