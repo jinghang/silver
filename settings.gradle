@@ -1,0 +1,6 @@
+rootProject.name = 'silver'
+include 'util'
+include 'common'
+include 'repo'
+include 'service'
+include 'webapi'
