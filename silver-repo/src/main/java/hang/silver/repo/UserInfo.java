@@ -3,6 +3,7 @@ package hang.silver.repo;
 public class UserInfo {
 	private String name;
 
+
 	public String getName() {
 		return name;
 	}

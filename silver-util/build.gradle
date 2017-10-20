@@ -1,0 +1,6 @@
+
+dependencies{
+    // https://mvnrepository.com/artifact/com.belerweb/pinyin4j
+    compile "com.belerweb:pinyin4j:2.5.0"
+    compile "com.google.code.gson:gson:2.7"
+}

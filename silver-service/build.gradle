@@ -2,4 +2,6 @@
 
 dependencies{
     compile project(':silver-repo')
+    compile project(':silver-common')
+    compile project(':silver-util')
 }
