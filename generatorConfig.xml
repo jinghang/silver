@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <classPathEntry location="D:/mysql-connector-java-5.1.40.jar"/>
+    <context id="context1" targetRuntime="MyBatis3">
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+        <!-- 注释 -->
+        <commentGenerator >
+            <property name="suppressAllComments" value="false"/><!-- 是否取消注释 -->
+            <property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳-->
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection connectionURL="jdbc:mysql://127.0.0.1/silver" driverClass="com.mysql.jdbc.Driver" password="123456" userId="root">
+            <property name="useInformationSchema" value="false"/>
+        </jdbcConnection>
+        <javaModelGenerator targetPackage="hang.silver.repo.domain" targetProject="silver-repo/src/main/java" />
+        <sqlMapGenerator targetPackage="hang.silver.repo.mapper" targetProject="silver-repo/src/main/java" />
+        <javaClientGenerator targetPackage="hang.silver.repo.mapper" targetProject="silver-repo/src/main/java" type="XMLMAPPER" />
+
+        <table schema="cai_niao" tableName="%"
+               enableCountByExample="true"
+               enableDeleteByExample="true"
+               enableSelectByExample="true"
+               enableUpdateByExample="true"
+        >
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
