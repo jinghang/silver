@@ -19,6 +19,14 @@ import javax.servlet.http.HttpServletResponse;
 @ControllerAdvice
 @RestController
 public class GlobalExceptionHandler {
+
+	/**
+	 * 通用异常处理
+	 * @param req
+	 * @param res
+	 * @param e
+	 * @return
+	 */
 	@ExceptionHandler(value = {Throwable.class})
 	@ResponseBody
 	public ApiResult<Object> jsonErrorHandler(HttpServletRequest req, HttpServletResponse res, Exception e){
@@ -31,6 +39,13 @@ public class GlobalExceptionHandler {
 		return r;
 	}
 
+	/**
+	 * API 传入参数异常
+	 * @param req
+	 * @param res
+	 * @param e
+	 * @return
+	 */
 	@ExceptionHandler(value = {MethodArgumentNotValidException.class})
 	@ResponseBody
 	public ApiResult<Object> ValidExceptionHandler(HttpServletRequest req,  HttpServletResponse res, MethodArgumentNotValidException e){
@@ -46,6 +61,13 @@ public class GlobalExceptionHandler {
 		return r;
 	}
 
+	/**
+	 * 插入数据库异常
+	 * @param req
+	 * @param res
+	 * @param e
+	 * @return
+	 */
 	@ExceptionHandler(value = {DataIntegrityViolationException.class})
 	@ResponseBody
 	public ApiResult<Object> DataIntegrityViolationExceptionHandler(HttpServletRequest req,  HttpServletResponse res, DataIntegrityViolationException e){
